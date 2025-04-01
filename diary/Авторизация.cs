@@ -1,9 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using System.Diagnostics;
 using System.Diagnostics.Eventing.Reader;
 
 namespace diary;
 
+[DebuggerDisplay($"{{{nameof(GetDebuggerDisplay)}(),nq}}")]
 public partial class Авторизация : Form
 {
     public Авторизация()
@@ -112,5 +114,10 @@ public partial class Авторизация : Form
             MessageBox.Show("Пользователь авторизован.") ;
         else
             MessageBox.Show("Пользователь не авторизован. Повторите попытку.");
+    }
+
+    private string GetDebuggerDisplay()
+    {
+        return ToString();
     }
 }

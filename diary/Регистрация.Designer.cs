@@ -91,7 +91,6 @@ namespace diary
             pictureBox18.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox18.TabIndex = 53;
             pictureBox18.TabStop = false;
-            pictureBox18.Click += pictureBox18_Click;
             // 
             // pictureBox17
             // 
@@ -379,6 +378,7 @@ namespace diary
             username.Name = "username";
             username.Size = new Size(294, 34);
             username.TabIndex = 54;
+            username.TextChanged += username_TextChanged;
             // 
             // login
             // 
